@@ -1,0 +1,57 @@
+Sum N Numbers
+Created by Priya Sadhale
+Last updated just a moment ago2 min readAnalyticsAnalytics
+Let's learn Python with some coding. A simple program like this can give us tons of knowledge. Read the instructions carefully and find the answer(s) along with a description. Believe me, you will get to know new ways of problem-solving:
+
+Instructions:
+
+
+Write a function that can sum up numbers:
+
+It should receive a sequence of n numbers.
+If no argument is provided, return sum of numbers 1..100.
+Look closely to the type of the function's default argument ...
+Here is the template:
+
+
+def sum_numbers(numbers=None):
+  pass
+The usual solution:
+
+
+def sum_numbers(numbers=None):
+    sum = 0
+    if numbers == None:
+        for num in range(1,101):
+            sum += num
+    else:
+        for num in numbers:
+            sum += num
+            
+    return sum
+Python is flexible and one can write, simple yet powerful code in fewer lines. Hence the above problem can be solved as:
+
+
+def sum_numbers(numbers=None):
+  if numbers == None:
+    numbers = range(101) 
+  
+  return sum(numbers)
+function sum_numbers() has a default parameter that sets data to None if no data is passed. In such a case, the function will return the addition of 1 to 100 numbers. The range() function in Python returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number. The value given (101 in this case) is exclusive and won’t be considered (Remember, Between-And operator in SQL?).  
+
+Python has many built-in functions. Developers can take advantage of functions such as sum(), min(), max(), len() and apply them to a list, tuple, set, or dictionary.
+
+You may use inline 'if' and write the above code as:
+
+
+def sum_numbers(numbers=None):
+  return sum(numbers) if numbers else sum(range(101))
+You may try:
+
+Sum of odd numbers with the same instructions
+
+Try to find the maximum of sum values of even and odd
+
+Print the numbers in reverse order.
+
+Have a fun!
